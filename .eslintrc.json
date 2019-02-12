@@ -7,7 +7,9 @@
     "fetch": true,
     "window": true,
     "navigator": true,
-    "it": true
+    "it": true,
+    "test": true,
+    "expect": true
   },
   "rules": {
     "import/no-unresolved": "off",

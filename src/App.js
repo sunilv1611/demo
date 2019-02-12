@@ -2,6 +2,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import sum from './Sum';
 
 const App = () => (
   <div className="App">
@@ -13,6 +14,7 @@ const App = () => (
       <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
         Learn React
       </a>
+      {sum(1, 3)}
     </header>
   </div>
 );
