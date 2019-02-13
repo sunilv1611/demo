@@ -1,8 +1,7 @@
 #!/bin/groovy
 pipeline {
-    agent { docker { image 'node:10.14.1' } }
-    
-    stages {
+    node {
+      stages {
         stage ('tests') {
           steps {
             sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
@@ -15,4 +14,5 @@ pipeline {
             }
         }
     }
+  }
 }
