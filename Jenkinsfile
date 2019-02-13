@@ -1,6 +1,6 @@
 stage ('tests') {
-  withEnv(["JEST_JUNIT_OUTPUT=./jest-test-results.xml"]) {
+  withEnv(["JEST_JUNIT_OUTPUT=output/coverage/junit/junit.xml"]) {
     sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
   }
-  junit 'jest-test-results.xml'
+  junit 'output/coverage/junit/junit.xml'
 }
