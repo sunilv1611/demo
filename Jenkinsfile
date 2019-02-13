@@ -1,6 +1,6 @@
 #!/bin/groovy
 pipeline {
-    agent {label 'node'}
+    agent { docker { image 'node:6.3' } }
     
     stages {
         stage ('tests') {
