@@ -13,11 +13,24 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "flow": "flow",
     "precommit": "lint-staged"
+  },
+  "jest": {
+    "coverageReporters": [
+      "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "output": "output/coverage/junit/junit.xml",
+    "usePathForSuiteName": "true"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -43,6 +56,7 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^0.14.3",
     "jest": "^24.1.0",
+    "jest-junit": "^6.2.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
   }
