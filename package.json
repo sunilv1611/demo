@@ -24,8 +24,8 @@
       "text"
     ],
     "reporters": [
-      "default",
-      "jest-junit"
+      "jest-junit",
+      "default"
     ]
   },
   "jest-junit": {
