@@ -1,6 +1,6 @@
 #!/bin/groovy
 pipeline {
-    agent none
+    agent {label 'node'}
     
     stages {
         stage ('tests') {
