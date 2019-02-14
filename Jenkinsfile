@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ('tests') {
           steps {
-            sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
+            sh 'npm test -- --ci'
             junit 'output/coverage/junit/junit.xml'
           }
         }
