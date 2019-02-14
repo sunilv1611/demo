@@ -1,6 +1,13 @@
-node {
-	withEnv(["JEST_JUNIT_OUTPUT=output/coverage/junit/junit.xml"]) {
-    sh 'npm test'
-  }
-  junit 'output/coverage/junit/junit.xml'
+#!/bin/groovy
+pipeline {
+    agent { docker { image 'node:6.3' } }
+    
+    stages {
+        stage ('tests') {
+          steps {
+            sh 'npm test -- --ci --testResultsProcessor="jest-junit"'
+            junit 'output/coverage/junit/junit.xml'
+          }
+        }
+    }
 }
