@@ -5,9 +5,9 @@ pipeline {
     stages {
         stage ('tests') {
           steps {
-            sh 'npm test -- --ci'
+            sh 'npm run test -- --ci'
             junit 'output/coverage/junit/junit.xml'
           }
-        }
+        } 
     }
 }
