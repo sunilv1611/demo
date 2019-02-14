@@ -25,7 +25,6 @@
     ],
     "reporters": [
       "default",
-      "jest-tap-reporter",
       "jest-junit"
     ]
   },
