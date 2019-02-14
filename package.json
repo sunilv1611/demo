@@ -25,11 +25,13 @@
     ],
     "reporters": [
       "default",
+      "jest-tap-reporter",
       "jest-junit"
     ]
   },
   "jest-junit": {
-    "output": "output/coverage/junit/junit.xml",
+    "suiteName": "jest tests",
+    "outputName": "output/coverage/junit/junit.xml",
     "usePathForSuiteName": "true"
   },
   "lint-staged": {
