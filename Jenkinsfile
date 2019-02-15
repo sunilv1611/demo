@@ -6,7 +6,7 @@ pipeline {
         stage ('tests') {
           steps {
             sh 'jest --coverage --coverageDirectory=output/coverage/jest'
-            junit '/*.xml'
+            junit 'output/coverage/junit/junit.xml'
           }
         } 
     }
