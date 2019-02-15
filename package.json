@@ -10,7 +10,7 @@
     "react-test-renderer": "^16.8.1"
   },
   "scripts": {
-    "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --coverage --coverageDirectory=output/coverage/jest",
     "eject": "react-scripts eject",
